@@ -1,0 +1,29 @@
+.features {
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  justify-content: center;
+  margin: 8rem 0;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, 1fr);
+  align-content: start;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    grid-row: 1 / span 2;
+    font-size: 3.5rem;
+    color: $color-primary;
+    transform: translateY(-0.6rem);
+  }
+
+  &__text {
+    color: $color-grey-dark-1;
+    font-size: 1.6rem;
+  }
+}
